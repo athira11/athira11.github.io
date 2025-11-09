@@ -31,6 +31,23 @@ body {
   color: #555;
 }
 
+/* Google Scholar | ADS line */
+.links-line {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+.links-line a {
+  color: dodgerblue;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links-line a:hover {
+  text-decoration: underline;
+  color: #1e90ff; /* slightly deeper dodgerblue on hover */
+}
+
 /* Three-column content area: sidebar | text | photo */
 .content-layout {
   display: grid;
