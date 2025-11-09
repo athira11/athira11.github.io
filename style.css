@@ -1,4 +1,4 @@
-/* Overall page layout */
+/* Base layout */
 body {
   margin: 0;
   padding: 0;
@@ -9,50 +9,84 @@ body {
 }
 
 .page {
-  max-width: 800px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 2rem 1rem 3rem;
+  padding: 2rem 1.5rem 3rem;
 }
 
-/* Header and title */
+/* Header */
+.site-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 .site-header h1 {
-  font-size: 2.3rem;
-  margin: 0 0 0.5rem;
+  font-size: 2.4rem;
+  margin: 0 0 0.2rem;   /* smaller gap above subtitle */
 }
 
-/* Navigation bar similar to simple text links */
+.subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* Three-column content area: sidebar | text | photo */
+.content-layout {
+  display: grid;
+  grid-template-columns: 160px 1fr 230px;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Sidebar nav */
+.sidebar {
+  padding-top: 0.5rem;
+}
+
 .site-nav ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.site-nav li {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .site-nav a {
   text-decoration: none;
-  color: #0366d6; /* GitHub-ish blue */
+  color: #0366d6;
 }
 
 .site-nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
-main h2 {
+/* Main text */
+.main-content h2 {
   font-size: 1.5rem;
   margin-bottom: 0.3rem;
 }
 
-/* Thin divider under "About me" */
 .divider {
   height: 1px;
   background-color: #ddd;
   margin: 0 0 1.5rem;
+}
+
+/* Photo on the right */
+.photo-area {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Footer */
@@ -62,4 +96,24 @@ main h2 {
   color: #555;
   border-top: 1px solid #eee;
   padding-top: 1rem;
+  text-align: center;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 800px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    text-align: center;
+  }
+
+  .site-nav ul {
+    align-items: center;
+  }
+
+  .photo-area {
+    margin-top: 1.5rem;
+  }
 }
