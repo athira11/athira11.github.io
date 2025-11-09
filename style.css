@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fefefe;
+}
+
+header, footer {
+  text-align: center;
+  margin: 2em 0;
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
